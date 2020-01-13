@@ -95,7 +95,7 @@ while i <= 20:
 
 odd_list = []
 x = 0
-if x %= 1:
+if x % 2 == 1:
     odd_list.append(x)
 
 print(odd_list)
