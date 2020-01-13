@@ -1,0 +1,3 @@
+myName = 'Gjermund'
+print('The lenght ofyour name is:')
+print(len(myName))
