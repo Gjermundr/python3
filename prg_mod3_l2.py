@@ -1,4 +1,3 @@
-'''
 # string manipulation
 my_string = "asshat"
 slice_of_string = my_string[1:4] # starting at index 1 to char before index 4
@@ -32,10 +31,10 @@ while condition:                                            # while loop incase 
 
 
 # Program receiving numbers and letters, then determining the amount of numbers vs letters.
-user_input = input('Enter whatever you want: ')
-split_input = list(user_input)
-print(split_input)
-'''
+#user_input = input('Enter whatever you want: ')
+#split_input = list(user_input)
+#print(split_input)
+
 
 def max(num1, num2):
     if num1 > num2:
