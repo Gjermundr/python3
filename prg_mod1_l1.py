@@ -7,6 +7,9 @@ if int(userinput) % 2 == 0:
     print(str(userinput)+' is an even number.')
 
 else:
+<<<<<<< HEAD
+    print(str(userinput)+' is an odd number.')
+=======
     print(str(userinput)+' is an odd number.')
 
 # lists, arrays, and whatever... syntax: list_var = [1,2,3,4.78,'etc']
@@ -100,3 +103,4 @@ if x % 2 == 1:
 
 print(odd_list)
 
+>>>>>>> 8552e36a1bdc8c8a1b4e86e2f55ddf1d73ffde22
