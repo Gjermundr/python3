@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # km/h to m/s calculator
 
 def kmh_to_ms(kmh):
@@ -39,7 +38,6 @@ def fibo_numbers(fn):
     return answer
 
 print(fibo_numbers(10))
-=======
 ### REMEMBER TO ADD THE PREVIOUS TASKS!
 
 # n1 and n2 are the first two values in the fibonacci sequence
@@ -53,4 +51,3 @@ for i in range(10):
 # updating the two values before looping and printing the next value in the seq
     n1 = n2
     n2 = nx
->>>>>>> 8552e36a1bdc8c8a1b4e86e2f55ddf1d73ffde22
