@@ -24,7 +24,7 @@ test_class.display()
 # program that thinks of a number between 0 - 100, user tries to guess the number.
 print('\n  Welcome to my mini-game!\n', '-'* 27, '\nTry to guess the randomly generated number from this program.\n If you guess wrong, a new number will be generated between your guess and the programs number\n untill you guess correctly.')
 #establishing some variables
-guess = 1
+guess = 0
 answer = 1
 low_range = 0
 high_range = 1000
