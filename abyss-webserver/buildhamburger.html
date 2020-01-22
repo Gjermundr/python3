@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ham-Builder setup!</title>
+</head>
+<body>
+    <form action="processburgerorder.py" method="POST" enctype="multipart/form-data">
+        <h1>Build-a-Burger!</h1>
+
+        <h4>Type of burger:</h4>
+        <input type="radio" name="meat" value="beef"> Beef <br>
+        <input type="radio" name="meat" value="chicken"> Chicken <br>
+        <input type="radio" name="meat" value="rib"> Rib <br>
+        <input type="radio" name="meat" value="vegetarian"> Vegetarian <br>
+
+        <h4>Select bread type:</h4>
+        <input type="radio" name="bread" value="Normal bun"> Normal bun<br>
+        <input type="radio" name="bread" value="Ciabatta"> Ciabatta bun<br>
+        <input type="radio" name="bread" value="Angus"> Angus bun<br>
+
+        <h4>Select your toppings:</h4>
+        <input type="checkbox" name="cheese" value="cheese"> Cheese<br>
+        <input type="checkbox" name="tomato" value="tomato"> Tomato<br>
+        <input type="checkbox" name="bacon" value="bacon"> Bacon<br>
+        <input type="checkbox" name="raddish" value="raddish"> Raddish<br>
+        <input type="checkbox" name="redonions" value="redonions"> Red Onion<br>
+        <input type="checkbox" name="pickles" value="pickles"> Pickles <br>
+
+        <h4>Choose your Loyalty program:</h4>
+        <select name="lprogram">
+            <option value="Select-a-Loyalty-program!">- Select a Loyalty program! -</option>
+            <option value="Super-Premium-Burger-bonanza-Program">Super Premium Burger-bonanza Program</option>
+            <option value="Standard-BurgerCo-Program">Standard BurgerCo Program</option>
+            <option value="Poor-boys-club-no-Burger-Program">Proor-boys-club Program</option>
+        </select>
+
+        <h4>Upload an image of yourself!</h4>
+        <input type="file" name="imagefile" accept=".png,.jpg"/><br><br>
+
+        <input type="submit" value="submit"/> When done, click Submit
+    </form>
+</body>
+</html>
