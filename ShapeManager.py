@@ -1,43 +1,117 @@
 class Shape:
     _counter = 0
+    _shape = 'Shape'
 
-    def __init__(self, name: str, description: str, axis_x: int):
-        self.name = name
+    def __init__(self, description):
         self.description = description
-        self.axis_x = axis_x
         Shape._counter += 1
 
     def area(self):
         return 0
-    
 
     def volume(self):
         return 0
 
     def __str__(self):
-        return f'Shape: {self.name} \nDescription: {self.description} \nArea of shape: {self.area()} \nVolume of shape: {self.volume()}'
+        return f'Object: {self._shape} \nDescription: {self.description} \nArea of object: {self.area()} \nVolume of object: {self.volume()}\n'
 
 
 class TwoDimensionalShape(Shape):
-    def __init__(self, name: str, description: str, axis_x: int, axis_y: int):
-        super().__init__(name, description, axis_x)
-        self.axis_y = axis_y
+    _shape = 'Two-dimensional Shape'
+
+    def __init__(self, description):
+        super().__init__(description)
 
     def __str__(self):
-        return f'Two-Dimensional Shape: {self.name} \nDescription: {self.description} \nArea of shape: {super().area()} \nVolume of shape: {super().volume()}'
+        return super().__str__()
 
 
-class ThreeDimensionalShape(TwoDimensionalShape):
-    def __init__(self, name: str, description: str, axis_x: int, axis_y: int, axis_z: int):
-        super().__init__(name, description, axis_x, axis_y)
-        self.axis_z = axis_z
+class ThreeDimensionalShape(Shape):
+    _shape = 'Three-Dimensional Shape'
+
+    def __init__(self, description):
+        super().__init__(description)
 
     def __str__(self):
-        return f'Thee-Dimensional Shape: {self.name} \nDescription: {self.description} \nArea of shape: {super().area()} \nVolume of shape: {super().volume()}'
+        return super().__str__()
+
+
+class Square(TwoDimensionalShape):
+    _shape = 'Square'
+
+    def __init__(self, description, length: int):
+        self.length = length
+        super().__init__(description)
+
+    def area(self):
+        return self.length * self.length
+
+    def __str__(self):
+        return super().__str__()
+
+
+class Rectangle(TwoDimensionalShape):
+    _shape = 'Rectangle'
+
+    def __init__(self, description, length: int, width: int):
+        self.length = length
+        self.width = width
+        super().__init__(description)
+
+    def area(self):
+        return self.length * self.width
+
+    def __str__(self):
+        return super().__str__()
+
+
+class Cube(ThreeDimensionalShape):
+    _shape = 'Cube'
+
+    def __init__(self, description, length: int):
+        self.length = length
+        super().__init__(description)
+
+    def area(self):
+        return (self.length * self.length) * 6
+
+    def volume(self):
+        return (self.length * self.length) * self.length
+
+    def __str__(self):
+        return super().__str__()
 
 
 
+class Box(ThreeDimensionalShape):
+    _shape = 'Box'
 
-stickman = Shape('line', 'a fucking line', 40)
-cube = ThreeDimensionalShape('cube', 'a cube with three axis', 32,20,11)
+    def __init__(self, description, length: int, width: int, height: int):
+        self.length = length
+        self.width = width
+        self.heigth = height
+        super().__init__(description)
 
+    def area(self):
+        side_a = (self.length * self.width) * 4
+        side_b = (self.width * self.heigth) * 2
+        return side_a + side_b
+
+    def volume(self):
+        return (self.length * self.width) * self.heigth
+
+
+
+square1 = Square('Squares have all equal sides', 7)
+rectangle1 = Rectangle('A rectangle has unequal side lenghts', 12, 6)
+cube1 = Cube('this object is three-dimensional', 13)
+box1 = Box('three-dimensional, but with 3 different sides', 12,9,10)
+
+obj_list = [square1, rectangle1, cube1, box1]
+
+def main():
+    for obj in obj_list:
+        print(obj)
+    print(Shape._counter)
+
+if __name__ == '__main__': main()
