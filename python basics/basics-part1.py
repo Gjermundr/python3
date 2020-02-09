@@ -84,6 +84,78 @@ def f1():
 f1()
 
 
+# Ex11: Write a program that print the documents of Python built-in functions (syntax, description etc.)
+import types
+
+def help_func():
+    condition = True
+    while condition:
+        func = input('Enter a function name of type built-in: ')
+        try:
+            if isinstance(eval(func), types.BuiltinFunctionType):
+                print(help(eval(func)))
+                condition = False
+
+            else:
+                print('Function name not of type: Built-in, try again')
+        except:
+            pass
+
+
+# help_func()
+
+# Ex12: program to print the calendar of a given month and year
+import calendar
+def get_calender():
+    cal = calendar.TextCalendar()
+    year = int(input('Enter year:'))
+    month = int(input('Enter month: '))
+    cal.prmonth(year, month)
+
+
+# get_calender()
+
+
+# Ex14: print the diff between two dates.
+import datetime
+
+def date_diff():
+    print('Enter two dates to calculate the difference in time off; Use format YYYY,M,D')
+    f_date = input('Enter a date for which to calculate from: ')
+    l_date = input('Enter a date for which to calculate to: ')
+    l_fd = f_date.split(',')
+    l_ld = l_date.split(',')
+    date1 = datetime.datetime(int(l_fd[0]), int(l_fd[1]), int(l_fd[2]))
+    date2 = datetime.datetime(int(l_ld[0]), int(l_ld[1]), int(l_ld[2]))
+    print('Time difference: ', date2-date1)
+
+
+# date_diff()
+
+
+
+# Ex15: Python program to get the volume of a sphere with radius 6
+import math
+def sphere_volume(r):
+    volume = ((r**3)/3) * 4 * math.pi
+    print(volume)
+
+
+sphere_volume(2)
+
+
+# Ex16: get the difference between a given number and 17, if the number is greater than 17 return double the difference
+
+def grow_diff(val: int):
+    if val <= 17:
+        print(17 - val)
+
+    elif val > 17:
+        print((val - 17) * 2)
+
+
+grow_diff(11)
+
 
 
 
