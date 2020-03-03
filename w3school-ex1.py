@@ -26,3 +26,4 @@ class RomanNumerals:
 x = RomanNumerals(1248)
 
 print(x.int_to_num())
+print(x)
